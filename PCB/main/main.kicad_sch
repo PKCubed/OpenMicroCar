@@ -5613,16 +5613,6 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 21.59) (xy 243.84 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "802fab89-ac06-4a08-8e3c-4f8f8818e5ad")
-	)
-	(wire
-		(pts
 			(xy 251.46 59.69) (xy 248.92 59.69)
 		)
 		(stroke
@@ -5830,6 +5820,16 @@
 			(type default)
 		)
 		(uuid "a77af6af-1f6a-4b2c-9e26-08cc60bf2758")
+	)
+	(wire
+		(pts
+			(xy 238.76 21.59) (xy 243.84 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab0b9a87-79f2-477b-8162-122458d7004a")
 	)
 	(wire
 		(pts
@@ -7709,7 +7709,7 @@
 	)
 	(global_label "Headlight_Control"
 		(shape input)
-		(at 35.56 92.71 0)
+		(at 43.18 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7719,7 +7719,7 @@
 		)
 		(uuid "bf63d1b0-5264-4fce-b21e-6c709c9f0ca0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.4177 92.71 0)
+			(at 63.0377 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8105,7 +8105,7 @@
 	)
 	(global_label "IR Out"
 		(shape input)
-		(at 238.76 21.59 180)
+		(at 231.14 21.59 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8115,7 +8115,7 @@
 		)
 		(uuid "f517b73a-15c1-48d8-8854-3640c44cfa1c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 229.7272 21.59 0)
+			(at 222.1072 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9018,6 +9018,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 234.95 21.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1fee2e69-e9ab-430b-92f2-6d7999aa725c")
+		(property "Reference" "R15"
+			(at 234.95 21.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 234.95 19.558 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 234.95 23.368 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 234.95 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "766fd67d-b956-4e10-aca0-b6626cc6e96a")
+		)
+		(pin "1"
+			(uuid "c49488bd-916e-4ed6-9642-058fe623d5b4")
+		)
+		(instances
+			(project "main"
+				(path "/10a21986-0589-4c3b-a209-3cd4eaf5d331"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 255.27 97.79 0)
 		(unit 1)
@@ -9555,6 +9622,73 @@
 			(project "main"
 				(path "/10a21986-0589-4c3b-a209-3cd4eaf5d331"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 39.37 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39ed74eb-01a6-4a9e-a9db-e92913f94a6c")
+		(property "Reference" "R14"
+			(at 39.37 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 39.37 90.678 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 39.37 94.488 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 39.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "804234eb-fa00-4894-9649-802b191e2783")
+		)
+		(pin "1"
+			(uuid "34d45515-7e05-4cbc-8d3e-68c6094ccf4a")
+		)
+		(instances
+			(project "main"
+				(path "/10a21986-0589-4c3b-a209-3cd4eaf5d331"
+					(reference "R14")
 					(unit 1)
 				)
 			)
