@@ -16,3 +16,12 @@ There is provision for a speaker and amplifier IC on board. This can be used to 
 
 ![alt text](Images/Screenshot%202025-08-03%20080516.png)
 ![alt text](Images/Screenshot%202025-08-03%20080527.png)
+
+# Communication Details
+Everything here is just my plans. Nothing has been actually tested and done yet.
+
+Each car will be controlled through a web interface on people's phones. This web interface will come from a python program on a raspberry pi. When someone want's their car to go forward, they press the button on the web interface, which the python program sees, and then sends via wifi socket to the esp32 on that person's car, that they want to go forward. If the car doesn't hear from the python program for 1 second, it shuts off and goes to the disconnected failsafe state, that way it won't just drive away. We want the button latency to be as low as possible, approaching imperceptible.
+
+Each car will send out a couple bytes through the IR leds that will let other cars know which car it is. This will be the car ID code.
+
+People can also press the shoot button on their phone. This will tell the python program to request a shoot from the car. This will then read data through the IR receiver, and save any car ID codes it sees. It will report these back to python. At the same time, if the safe zone receivers see any IR car ID codes, Python will have seen that. If any of the shot cars match the safe cars, they will not be affected, but will be sent the safe shot signal to flash their LEDs and make a noise similar to that you get when you shoot a metal baloon in BTD Battles. If a car is not detected to be in a safe zone, it will be sent the shot signal, and it will be marked as shot until python sees it has been received by it's safe zone receiver.
